@@ -4,13 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monty Hall Olasılık Oyunu</title>
-    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Monty Hall Oyunu Yükleniyor...</h1>
-    <p>Eğer bu yazıyı görüyorsanız, HTML başarıyla yüklendi.</p>
+    <div class="main-container">
+        <div class="game-section" id="interactive-game">
+            <h2>İnteraktif Oyun Modu</h2>
+            <p class="section-description">Olasılıkları kendi gözlerinizle test edin. 3 deneme hakkınız var.</p>
+
+            <div class="info-bar">
+                <p class="game-message" id="game-message">Lütfen bir kapı seçin.</p>
+                <p class="tries-counter" id="tries-counter">Kalan Hak: 3</p>
+            </div>
+            
+            <div class="doors-container" id="doors-container">
+                <div class="door" data-door-index="0">
+                    <div class="door-front">
+                        <div class="door-number">1</div>
+                    </div>
+                    <div class="door-back"></div>
+                </div>
+                <div class="door" data-door-index="1">
+                    <div class="door-front">
+                        <div class="door-number">2</div>
+                    </div>
+                    <div class="door-back"></div>
+                </div>
+                <div class="door" data-door-index="2">
+                    <div class="door-front">
+                        <div class="door-number">3</div>
+                    </div>
+                    <div class="door-back"></div>
+                </div>
+            </div>
+
+            <button class="game-button" id="reset-button" style="display: none;">Tekrar Oyna</button>
+        </div>
+
+        <div class="game-section" id="simulation">
+            <h2>İstatistiksel Simülasyon</h2>
+            <p class="section-description">Binlerce deneme ile hangi stratejinin daha başarılı olduğunu görün.</p>
+            </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
